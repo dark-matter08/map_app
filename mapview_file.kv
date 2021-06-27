@@ -1,0 +1,14 @@
+#:import MapView kivy.garden.mapview.MapView
+
+<MapViewClass>:
+    # lat: 4.1587278341067755
+    # lon: 9.28267375685355
+    lat: 33.75
+    lon: -84.4
+    zoom: 10
+    on_zoom:
+        self.zoom = 10 if self.zoom < 10 else self.zoom
+    on_lat:
+        self.start_getting_markers_in_fov()
+    on_lon:
+        self.start_getting_markers_in_fov()
