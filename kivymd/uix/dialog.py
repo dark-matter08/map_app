@@ -155,7 +155,7 @@ Builder.load_string(
         orientation: 'vertical'
         padding: dp(15)
         spacing: dp(10)
-    
+
         MDLabel:
             id: title
             text: root.title
@@ -165,21 +165,21 @@ Builder.load_string(
             size_hint_y: None
             text_size: self.width, None
             height: self.texture_size[1]
-    
+
         ScrollView:
             id: scroll
             size_hint_y: None
             height:
                 root.height - (title.height + dp(48)\
                 + sep.height)
-    
+
             canvas:
                 Rectangle:
                     pos: self.pos
                     size: self.size
                     #source: '{}dialog_in_fade.png'.format(images_path)
                     source: '{}transparent.png'.format(images_path)
-    
+
             MDList:
                 id: list_layout
                 size_hint_y: None
@@ -190,7 +190,7 @@ Builder.load_string(
                         pos: self.pos
                         size: self.size
                     Color:
-                        rgba: [1,0,0,.5]   
+                        rgba: [1,0,0,.5]
                 ThinBox:
                     ThinLabel:
                         text: "Address: "
@@ -670,7 +670,6 @@ class MDInputDialog(BaseDialog):
         )
         self.add_widget(self.content_dialog)
         self.set_content(self.content_dialog)
-        Clock.schedule_once(self.set_field_focus, 0.5)
 
     def set_field_focus(self, interval):
         self.text_field.focus = True

@@ -8,6 +8,7 @@ class MainApp(MDApp):
     cursor = None
     search_menu = None
     def on_start(self):
+        self.theme_cls.primary_palette = 'BlueGray'
         #initialize GPS
 
         #connect to datatbase
