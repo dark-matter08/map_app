@@ -1,4 +1,6 @@
 #:import MapView kivy.garden.mapview.MapView
+#:import GpsBlinker gpsblinker.GpsBlinker
+#:include gpsblinker.kv
 
 <MapViewClass>:
     # lat: 4.1587278341067755
@@ -12,3 +14,6 @@
         self.start_getting_markers_in_fov()
     on_lon:
         self.start_getting_markers_in_fov()
+    GpsBlinker:
+        id: blinker
+        source: "kivymd/images/transparent.png"
